@@ -108,7 +108,7 @@ def plot_curve(x_data, y_data, coefficients):
 
     # Plot the data points and the fitted curve
     plt.plot(x_data, y_data, 'bo', label='Data points')
-    plt.plot(x_vals, y_vals, 'r', label='Fitted curve')
+    # plt.plot(x_vals, y_vals, 'r', label='Fitted curve')
     plt.legend()
     plt.show()
 
