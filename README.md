@@ -9,15 +9,9 @@ the equation of a parabola:
 1. Detect and plot the pixel coordinates of the center point of the ball in the video.
 The below image demonstrates one of the snap out of the video
 <p align="center">
-<img src="https://user-images.githubusercontent.com/40595475/221061185-3cf5b0eb-f1d1-447f-9743-71a47b51d809.jpg" alt= “” width="400" height="200">
-<img src="https://user-images.githubusercontent.com/40595475/221061863-b7cf1a7c-0bb0-4217-aa67-3ba5f1792d1f.png" alt= “” width="400" height="200">
+<img src="https://user-images.githubusercontent.com/40595475/221436247-a8ac8cde-3551-4a5a-bd71-6e841a9a3007.png" alt= “” width="400" height="350">
 </p>
 <p align="center"> Fig1. Ball color identification </p>
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/40595475/221063662-25753003-0a48-4385-888f-9f66e1cd7887.png" alt= “” width="400" height="200">
-</p>
-<p align="center"> Fig2. Marking found ball in frame </p>
 
 &nbsp;&nbsp; 2. Use Standard Least Squares to fit a curve to the extracted coordinates. For the estimated parabola you must,
 
@@ -75,9 +69,9 @@ Given are two csv files, pc1.csv and pc2.csv, which contain noisy LIDAR point cl
  [ 0.53971234 -0.41941949 -0.72993005]
  [ 0.79172003 -0.04185278  0.60944872]] 
  
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The direction of normal vector is:  [0.28616428 0.53971234 0.79172003]
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The direction of normal vector is:  [0.28616428 0.53971234 0.79172003] 
  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The magnitude of the normal is:  0.6672780805108758 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The magnitude of the normal is:  0.8168709081065844 
   
 &nbsp;&nbsp; 1. In this question, you will be required to implement various estimation algorithms such as Standard Least Squares, Total Least Squares and RANSAC:
 
@@ -88,19 +82,24 @@ Given are two csv files, pc1.csv and pc2.csv, which contain noisy LIDAR point cl
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Coefficients of Standard Least Square plane equation for PC2 are:  [-0.25188404] [-0.67173669] [3.66025669]
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/40595475/221074754-6e45fcd9-79da-481f-9fbf-53d2c4f32536.png" alt= “Standard_Least_Square” width="600" height="350">
+<img src="https://user-images.githubusercontent.com/40595475/221436499-28530693-74ef-4adf-9a97-f04bb51cd9aa.png" alt= “Standard_Least_Square” width="600" height="350">
 </p>
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Coefficients of Total Least Square plane equation for PC1 are:  0.28616427612095185 0.5397123383073391 0.7917200256094297 -2.5344641945425828
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Coefficients of Total Least Square plane equation for PC2 are:  -0.221074092839804 -0.5873941957270391 -0.7785205869476045 2.8494445218366775
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/40595475/221074786-41167299-78f0-4481-96d5-0c65686ba9f6.png" alt= “Total_Least_Square” width="600" height="350">
+<img src="https://user-images.githubusercontent.com/40595475/221436517-80152ecf-25ec-4ac8-b428-e6f7e3d2bd09.png" alt= “Total_Least_Square” width="600" height="350">
 </p>
 
 &nbsp;&nbsp;&nbsp;&nbsp; b. Additionally, fit a surface to the data using RANSAC. You will need to write RANSAC code from scratch. Briefly explain all the steps of your solution, and the parameters used. Plot the output surface on the same graph as the data. Discuss which graph fitting method would be a better choice of outlier rejection.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/40595475/221075119-06cb6a8e-abb6-4e48-a0b7-72a9712e9182.png" alt= “Standard_Least_Square” width="600" height="350">
+<img src="https://user-images.githubusercontent.com/40595475/221436475-a250679e-d2bd-479e-b3d6-96d4433c33c8.png" alt= “RANSAC” width="600" height="350">
 </p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RANSAC Surface equation coefficients for PC1 are: a = -82.80817673028923  b = -151.58171705887023 c = -208.86214701779943 d = 642.53322429545 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RANSAC Surface equation coefficients for PC2 are: a = 57.73853977057806  b = 111.72937258701376 c = 169.93983739816065 d = -501.68562992996283 
