@@ -47,16 +47,20 @@ plt.imshow(ball_found)
 #Extract x,y coordinate of ball from each frame of video
 coordinates = get_centroids(video_frames)
 
-#figure representing the least square fitting done on graph
-fig2 = plt.figure("Standard Least Square fitting")
-implot = plt.imshow(cv2.cvtColor(video_frames[100], cv2.COLOR_BGR2RGB))
-
 # x and y coordinates of all the detected ball in frames
 x = [i[0] for i in coordinates]
 y = [i[1] for i in coordinates]
 
 x_data = np.array(x)
 y_data = np.array(y)
+
+fig4 = plt.figure("Problem 1.1")
+plt.plot(x_data, y_data)
+plt.imshow(cv2.cvtColor(video_frames[100], cv2.COLOR_BGR2RGB))
+
+#figure representing the least square fitting done on graph
+fig2 = plt.figure("Standard Least Square fitting")
+implot = plt.imshow(cv2.cvtColor(video_frames[100], cv2.COLOR_BGR2RGB))
 
 # ----------------------------- PROBLEM 1 - Question 2 and 3 - Standard Least Square----------------------------------------------
 
